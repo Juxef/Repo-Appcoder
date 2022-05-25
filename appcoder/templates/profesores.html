@@ -1,0 +1,31 @@
+{% extends "plantilla.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+
+<p> CURSOS EN LA BD </p>
+  
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for n in profesores %}
+      <tr>
+        <th scope="row">{{n.id}}</th>
+        <td>{{n.nombre}}</td>
+        <td>{{n.apellido}}</td>
+      </tr>
+
+    {% endfor %}
+
+    </tbody>
+  </table>
+
+{% endblock %}
